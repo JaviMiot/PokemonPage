@@ -18,12 +18,13 @@ const styles = {
 
 const Pokemon = ({ data }) => {
   const router = useRouter();
-  const id = router.query.id;
-  const imagen = data.sprites.other.dream_world.front_default;
 
   if (router.isFallback) {
     return <h1>Cargando...</h1>;
   }
+  
+  const id = router.query.id;
+  const imagen = data.sprites.other.dream_world.front_default;
   return (
     <AppLayout>
       <section style={styles.section}>
